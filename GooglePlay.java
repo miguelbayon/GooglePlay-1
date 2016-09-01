@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Tienda here.
  * 
@@ -7,16 +7,15 @@
  */
 public class GooglePlay
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private ArrayList<Usuario> usuarios;
+    private ArrayList<Producto> productos;
     /**
      * Constructor for objects of class Tienda
      */
     public GooglePlay()
     {
-        // initialise instance variables
-        x = 0;
+        usuarios = new ArrayList<Usuario>();
+        productos = new ArrayList<Producto>();
     }
 
     /**
@@ -25,9 +24,13 @@ public class GooglePlay
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public void registrarUsuario(Usuario usuario)
     {
-        // put your code here
-        return x + y;
+        usuarios.add(usuario);
+    }
+    
+    public void registrarProducto(Producto producto)
+    {
+        productos.add(producto);
     }
 }
