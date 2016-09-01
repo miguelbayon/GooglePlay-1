@@ -7,8 +7,12 @@ import java.util.*;
  */
 public class GooglePlay
 {
+   // iniciamos la array de usuarios y productos
     private ArrayList<Usuario> usuarios;
     private ArrayList<Producto> productos;
+    // creamos contadores de usuarios y productos
+    private int contadorProductos;
+    private int contadorUsuarios;
     /**
      * Constructor for objects of class Tienda
      */
@@ -16,21 +20,43 @@ public class GooglePlay
     {
         usuarios = new ArrayList<Usuario>();
         productos = new ArrayList<Producto>();
+        contadorProductos = 0;
+        contadorUsuarios = 0;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * añadimos usuarios
      */
-    public void registrarUsuario(Usuario usuario)
+    public void addUsuario(Usuario usuario)
     {
         usuarios.add(usuario);
+        contadorUsuarios++;
     }
     
-    public void registrarProducto(Producto producto)
+    /**
+     * añadimos productos
+     */
+    public void addProducto(Producto producto)
     {
         productos.add(producto);
+        contadorProductos++;
     }
-}
+    
+
+    /**
+     * obtenemos el numero de productos
+     */
+    public int getNumeroProductos()
+    {
+        return contadorProductos;
+    }
+    
+    
+    /**
+     * obtenemos el numero de productos
+     */
+    public int getNumeroUsuarios()
+    {
+        return contadorUsuarios;
+    }
+    }

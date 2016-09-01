@@ -7,26 +7,34 @@
  */
 public class Libro extends ProductoMultimedia
 {
-    // instance variables - replace the example below with your own
+    //iniciamos las variable que nos dice el numero de paginas
     private int numeroPaginas;
+    //iniciamos las variable que nos dice si es de ficcion o no
     private boolean ficcion;
     /**
      * Constructor for objects of class Libro
      */
-    public Libro(int ano, String titulo, int numeroPaginas, boolean ficcion)
+    public Libro( String titulo,int ano, int numeroPaginas, boolean ficcion)
     {
-        super(ano, titulo);
+        super( titulo, ano);
+        this.numeroPaginas = numeroPaginas;
+        this.ficcion = ficcion;
     }
-
+    
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * obtenemos el numero de paginas
      */
-    public void sampleMethod()
+    public int getNumeroPaginas()
     {
-        // put your code here
-        
+        return numeroPaginas;
     }
+    
+    /**
+     * obtenemos si es de ficcion o no
+     */
+    public boolean getFiccion()
+    {
+        return ficcion;
+    }
+    
 }

@@ -8,37 +8,55 @@ import java.util.*;
 public class Aplicacion extends Producto
 {
     //iniciamos las variable que nos dice el espacio que ocupa
-    private int espacio;
-    //inicializamos las variables que nos crean las array list para los tipos de aplicaciones
-    private ArrayList<String> juegos ;
-    private ArrayList<String> comunicacion ;
-    private ArrayList<String> productividad ;
-    private ArrayList<String> multimedia ;
+    private double espacio;
+    //iniciamos las variable que nos dice el nombre
+    private String nombre;
+    //iniciamos las variable que nos dice la categoria
+    private Categoria categoria;
     /**
      * Constructor for objects of class Aplicacion
      */
-    public Aplicacion(String nombre, String tipo, int espacio )
+    public Aplicacion(String nombre, double espacio, Categoria categoria )
     {
         super();
-        juegos = new ArrayList<String>();
-        comunicacion = new ArrayList<String>();
-        productividad = new ArrayList<String>();
-        multimedia = new ArrayList<String>();
-        if (tipo.equals("juegos")){
-             juegos.add(new String(tipo));
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.espacio = espacio;
+    }
+    
+    /**
+     * obtenemos el Nombre como String
+     */
+    public String getNombre(){
+        return nombre;
+    }
+    
+    /**
+     * obtenemos el espacio en MB
+     */
+    public double getTamanoEnMB(){
+        return espacio;
+    }
+    
+    /**
+     * obtenemos la categoria como String
+     */
+    public String getCategoria(){
+        String categorias = categoria.toString();
+        if (categorias.equals("MULTIMEDIA")){
+            categorias = "Multimedia";
         }
-        else if(tipo.equals("comunicacion")){
-             comunicacion.add(new String(tipo));
+        else if (categorias.equals("COMUNICACIONES")){
+            categorias = "Comunicaciones";
         }
-        else if(tipo.equals("productividad")){
-             productividad.add(new String(tipo));            
+         else if (categorias.equals("PRODUCTIVIDAD")){
+            categorias = "Productividad";
         }
-        else{
-             multimedia.add(new String(tipo));
+        else {
+            categorias = "Juegos";
         }
+        return categorias;
         
     }
-
-    
     
 }

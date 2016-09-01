@@ -5,15 +5,33 @@
  * @author (your name here)
  * @version (version number or date here)
  */
-public abstract class ProductoMultimedia extends Producto
+public  class ProductoMultimedia extends Producto
 {
-    // instance variables - replace the example below with your own
+    // iniciamos las variables de año y titulo
     private int ano;
-    private String titulo;
+    public String titulo;
 
     
-    public ProductoMultimedia(int ano, String titulo)
+    public ProductoMultimedia(String titulo,int ano)
     {
         super();
+        this.titulo = titulo;
+        this.ano = ano;
+    }
+    
+    /**
+     * obtenemos el titulo
+     */
+    public String getTitulo()
+    {
+        return titulo;
+    }
+    
+    /**
+     * obtenemos el año 
+     */
+    public int getAno()
+    {
+        return ano;
     }
 }

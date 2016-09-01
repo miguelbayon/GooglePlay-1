@@ -7,7 +7,7 @@
  */
 public class Usuario
 {
-    // atributo usuario creado
+    // variable usuario creado
     private String usuario;
     
     /**
@@ -17,6 +17,12 @@ public class Usuario
     {
         this.usuario = usuario;
     }
-
+    
+    /**
+     * obtenemos el Nombre del usuario
+     */
+    public String getNombreCuenta(){
+        return usuario;
+    }
     
 }

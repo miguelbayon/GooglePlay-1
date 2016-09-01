@@ -7,17 +7,38 @@
  */
 public class Pelicula extends ProductoMultimedia
 {
-    // instance variables - replace the example below with your own
+    //iniciamos las variable que nos dice la duracion
     private int duracion;
-    private boolean calidad;
+    //iniciamos las variable que nos dice la calidad
+    private int calidad;
 
     /**
      * Constructor for objects of class Pelicula
      */
-    public Pelicula(int ano, String titulo, int duracion, boolean calidad)
+    public Pelicula(String titulo,int ano, int duracion, int calidad)
     {
-        super(ano, titulo);
+        super(titulo, ano );
+        this.duracion = duracion;
+        this.calidad = calidad;
     }
-
+    /**
+     * obtenemos la duracion de la peli
+     */
+    public int getDuracion(){
+        return duracion;
+    }
     
+    /**
+     * obtenemos la calidad de la peli como String
+     */
+    public String getCalidad(){
+        String calidades =  null; 
+        if (calidades.equals("1080")){
+            calidades = "FullHD";
+        }
+        else{
+            calidades = "HD";
+        }
+        return calidades;
+    }
 }
