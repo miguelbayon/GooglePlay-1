@@ -59,7 +59,9 @@ public class GooglePlay
     }
 
     /**
-     * 
+     * Metodo que nos ejecuta una compra diferenciando si, enc aso de ser una aplicacion, se a comprado mas de una vez
+     * o que tipo de aplicacion sea. Por otra parte si es un libro o una pelicula nos calculara el precio en funcion de sus paginas y antigüedad para los libros
+     * o en funcion de si esta en Full HD o no para las peliculas con una rebaja del 50% si se trata de una pelicula mas antigua del 2000
      */
     public String comprar(Usuario usuario, Producto producto)
     {
@@ -67,10 +69,10 @@ public class GooglePlay
         int j = 0;
         int m = 0;
         int p = 0;
-        if((usuario = null )||(producto = null)){
+        if((usuario == null )||(producto == null)){
             infoCompra = -1;
         }
-        if(producto.getProducto().equals("Aplicacion"))
+        else if(producto.getNombreProducto().equals("Aplicacion"))
         {
             if(producto.getAplicacion().equals("Juego")){
                 if(j == 3){
