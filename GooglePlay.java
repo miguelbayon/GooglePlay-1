@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class GooglePlay
 {
-   // iniciamos la array de usuarios y productos
+    // iniciamos la array de usuarios y productos
     private ArrayList<Usuario> usuarios;
     private ArrayList<Producto> productos;
     // creamos contadores de usuarios y productos
@@ -32,7 +32,7 @@ public class GooglePlay
         usuarios.add(usuario);
         contadorUsuarios++;
     }
-    
+
     /**
      * añadimos productos
      */
@@ -41,7 +41,6 @@ public class GooglePlay
         productos.add(producto);
         contadorProductos++;
     }
-    
 
     /**
      * obtenemos el numero de productos
@@ -50,8 +49,7 @@ public class GooglePlay
     {
         return contadorProductos;
     }
-    
-    
+
     /**
      * obtenemos el numero de productos
      */
@@ -59,23 +57,65 @@ public class GooglePlay
     {
         return contadorUsuarios;
     }
-    
+
     /**
      * 
      */
     public String comprar(Usuario usuario, Producto producto)
     {
-        String infoCompra = null;
-        if((usuario != usuario)||(producto != productos))
-        
-        
-        
-        
-        
-        
-        
-        
+        int infoCompra = 0;
+        int j = 0;
+        int m = 0;
+        int p = 0;
+        if((usuario = null )||(producto = null)){
+            infoCompra = -1;
+        }
+        if(producto.getProducto().equals("Aplicacion"))
+        {
+            if(producto.getAplicacion().equals("Juego")){
+                if(j == 3){
+                    infoCompra = 5;
+                }
+                else{
+                    infoCompra = 0.99;
+                    j++;
+                }
+            }
+
+            else if(producto.getAplicacion().equals("Productiva")){
+                if(p == 3){
+                    infoCompra = 10;
+                }
+                else{
+                    infoCompra = 0.99;
+                    p++;
+                }
+            }
+            else{
+                if(m == 3){
+                    infoCompra = 2;
+                }
+                else{
+                    infoCompra = 0.99;
+                    m++;
+                }
+            }
+        }
+        else if(producto.getProducto().equals("Libro"))
+        {
+            infoCompra = (Libro.getNumeroPaginas()/100)*(Libro.getAnoPublicacion()-2010);
+        }
+        else
+        {
+            if (Pelicula.getCalidad().equals("FullHD")){
+                infoCompra = 10;
+            }
+            else{
+                 infoCompra = 5;
+            }
+
+        }
+
         return infoCompra;
-        
     }
-    }
+}
