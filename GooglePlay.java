@@ -59,4 +59,23 @@ public class GooglePlay
     {
         return contadorUsuarios;
     }
+    
+    /**
+     * 
+     */
+    public String comprar(Usuario usuario, Producto producto)
+    {
+        String infoCompra = null;
+        if((usuario != usuario)||(producto != productos))
+        
+        
+        
+        
+        
+        
+        
+        
+        return infoCompra;
+        
+    }
     }
